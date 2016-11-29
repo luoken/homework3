@@ -10,40 +10,55 @@
   </head>
 
   <body>
+    <h1>Ken Luo</h1> 
     <div class="container" ng-controller="AppCtrl">
-      <h1>Ken Luo</h1> 
-      
       <table class="table">
 	<thead>
 	  <tr>
 	    <th>Education </th>
 	  </tr>
-	  </thead>
-
+	</thead>
+	
+	<tbody>
 	  <tr ng-repeat="education in resume">
  	    <th>{{education.edu}}</th>
 	  </tr>
-	  </tr>
-	  <tr>
-	    <th> Skills </th>
-	  <tr ng-repeat="skills in resume">
- 	    <th>{{skills.skill}}</th>
-	  </tr>
-	  </tr>
-	  <tr>
-	    <th> Projects </th>
-	  <tr ng-repeat="projects in resume">
- 	    <th>{{projects.projects}}</th>
-	  </tr>
-	  </tr>
-	</thead>
-
-	<tbody>
-	  
-
+	</tbody>
       </table>
     </div>
     
+    <div class="container" ng-controller="AppCtrl">
+      <table class="table">
+	<thead>
+	  <tr>
+	    <th>Skill </th>
+	  </tr>
+	</thead>
+	
+	<tbody>
+	  <tr ng-repeat="skills in resume">
+ 	    <th>{{skills.skill}}</th>
+	  </tr>
+	</tbody>
+      </table>
+    </div>
+
+    <div class="container" ng-controller="AppCtrl">
+      <table class="table">
+	<thead>
+	  <tr>
+	    <th>Projects </th>
+	  </tr>
+	</thead>
+	
+	<tbody>
+	  <tr ng-repeat="projects in resume">
+ 	    <th>{{projects.project}}</th>
+	  </tr>
+	</tbody>
+      </table>
+    </div>
+
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
     <script src="controllers/controller.js"></script>
     
