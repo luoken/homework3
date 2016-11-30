@@ -57,7 +57,8 @@
 	
 	<tbody>
 	  <tr ng-repeat="projects in resume | filter:{type:'project'}">
- 	    <th>{{projects.skill}}</th>
+ 	    <th>{{projects.title}}</th>
+	    <th>{{projects.description}}</th>
 	  </tr>
 	</tbody>
       </table>
