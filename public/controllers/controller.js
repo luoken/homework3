@@ -10,38 +10,4 @@ myApp.controller('AppCtrl', ['$scope', '$http',
 				     
 				 };
 				 refresh();
-
-// 				 $scope.addContact = function(){
-// 				     console.log("entry: " + $scope.contact);
-// 				     $http.post('/resume', $scope.contact).success(function(response){
-// 					 console.log(response);
-// 					 refresh();
-// 				     });
-// 				 };
-				 
-// 				 $scope.remove = function(id){
-// 				     console.log(id);
-// 				     $http.delete('/contactList/' + id).success(function(response){
-// 					 refresh();
-// 				     });
-// 				 };
-				 
-// 				 $scope.edit = function(id){
-// 				     console.log(id);
-// 				     $http.get('/contactList/' + id).success(function(response){
-// 					 $scope.contact = response;
-// 				     });
-// 				 };
-
-// 				 $scope.update = function(){
-// 				     console.log($scope.contact._id);
-// 				     $http.put('/contactList/' + $scope.contact._id, $scope.contact).success(function(response){
-// 					 refresh();
-// 				     });
-// 				 };
-				 
-				 $scope.deselect = function(){
-				     $scope.person = "";
-				 };
-				 
 			     }]);

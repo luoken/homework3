@@ -10,34 +10,36 @@
   </head>
 
   <body>
-    <h1>Ken Luo</h1> 
-    <div class="container" ng-controller="AppCtrl">
+    <center><h1>Ken Luo</h1></center>
       <table class="table">
 	<thead>
 	  <tr>
-	    <th>Education </th>
+	    <th><h3>Education</h3></th>
+	    <th><h3>Last Year</h3></th>
+	    <th><h3>Degree</h3></th>
 	  </tr>
 	</thead>
 	
 	<tbody>
-	  <tr ng-repeat="education in resume">
- 	    <th>{{education.edu}}</th>
+	  <tr ng-repeat="education in resume | filter: {type: 'edu'}">
+ 	    <th>{{education.school}}</th>
+    	    <th>{{education.last_year}}</th>
+ 	    <th>{{education.degree}}</th>
 	  </tr>
 	</tbody>
       </table>
-    </div>
     
     <div class="container" ng-controller="AppCtrl">
       <table class="table">
 	<thead>
 	  <tr>
-	    <th>Skill </th>
+	    <th><h3>Skill:</h3></th>
 	  </tr>
 	</thead>
 	
 	<tbody>
-	  <tr ng-repeat="skills in resume">
- 	    <th>{{skills.skill}}</th>
+	  <tr ng-repeat="skills in resume | filter: {type:'skill'}">
+ 	    <th><p>{{skills.skill}}</p></th>
 	  </tr>
 	</tbody>
       </table>
@@ -47,13 +49,13 @@
       <table class="table">
 	<thead>
 	  <tr>
-	    <th>Projects </th>
+	    <th><h3>Projects:</h3></th>
 	  </tr>
 	</thead>
 	
 	<tbody>
-	  <tr ng-repeat="projects in resume">
- 	    <th>{{projects.project}}</th>
+	  <tr ng-repeat="projects in resume | filter:{type:'project'}">
+ 	    <th>{{projects.skill}}</th>
 	  </tr>
 	</tbody>
       </table>
